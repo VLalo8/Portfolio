@@ -7,5 +7,9 @@
     @apply w-full h-full bg-zinc-800
   }
 
+  html {
+    @apply scroll-smooth
+  }
+
 
 }
