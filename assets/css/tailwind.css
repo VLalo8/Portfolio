@@ -7,9 +7,40 @@
     @apply w-full h-full bg-zinc-800
   }
 
-  html {
-    @apply scroll-smooth
+.writer-text {
+  letter-spacing: 2px;
+  animation: typing 6s steps(32, end) infinite, blink .75s step-end infinite;
+  box-sizing: border-box;
+  @apply hover:text-emerald-400 text-white border-r-4 border-emerald-400 inline-block whitespace-nowrap text-5xl font-mono font-bold overflow-hidden select-none;
+}
+@keyframes typing {
+  0% { 
+      width: 0% 
   }
+  80% { 
+      width: 100% 
+  }
+  100% {
+    width: 0%
+  }
+}
 
+::-webkit-scrollbar {
+  @apply w-2
+}
+::-webkit-scrollbar-track {
+  @apply bg-zinc-800;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-500 hover:bg-emerald-400 rounded-3xl;
+}
 
+@keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: rgb(52 211 153 / var(--tw-border-opacity));
+    }
+}
 }

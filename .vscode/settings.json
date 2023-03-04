@@ -8,11 +8,19 @@
     "**/Thumbs.db": true,
     ".npmrc": true,
     ".vscode": true,
-    ".nuxt": true
+    ".nuxt": true,
+    "dist": true,
+    ".output": true,
+    "public": true,
+    "node_modules": true
   },
   "hide-files.files": [
     ".npmrc",
     ".vscode",
-    ".nuxt"
+    ".nuxt",
+    "dist",
+    ".output",
+    "public",
+    "node_modules"
   ]
 }
