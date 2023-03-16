@@ -1,0 +1,359 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "Microsoft GLTF Exporter 2.4.2.8"
+  },
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5123,
+      "count": 60,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5123,
+      "count": 60,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 39,
+      "type": "VEC3",
+      "max": [
+        0.4999999701976776,
+        0.5,
+        0.8529679179191589
+      ],
+      "min": [
+        -0.4999999701976776,
+        -0.5,
+        -0.8529679179191589
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 42,
+      "type": "VEC3",
+      "max": [
+        0.5,
+        0.5,
+        0.5160881876945496
+      ],
+      "min": [
+        -0.5,
+        -0.5,
+        -0.5160881876945496
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 39,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 42,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 39,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 42,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 39,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 42,
+      "type": "VEC4"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 120,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 120,
+      "byteLength": 120,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 240,
+      "byteLength": 468,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 708,
+      "byteLength": 504,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1212,
+      "byteLength": 468,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1680,
+      "byteLength": 504,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2184,
+      "byteLength": 312,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2496,
+      "byteLength": 336,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2832,
+      "byteLength": 624,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3456,
+      "byteLength": 672,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "vue_data.bin",
+      "byteLength": 4128
+    }
+  ],
+  "images": [
+    {
+      "uri": "vue_img0.png"
+    },
+    {
+      "uri": "vue_img1.png"
+    },
+    {
+      "uri": "vue_img2.png"
+    },
+    {
+      "uri": "vue_img3.png"
+    },
+    {
+      "uri": "vue_img4.png"
+    },
+    {
+      "uri": "vue_img5.png"
+    },
+    {
+      "uri": "vue_img6.png"
+    },
+    {
+      "uri": "vue_img7.png"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 2
+        },
+        "metallicRoughnessTexture": {
+          "index": 3
+        }
+      },
+      "name": "82",
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseTexture": {
+            "index": 0
+          },
+          "specularGlossinessTexture": {
+            "index": 1
+          }
+        }
+      },
+      "extras": {
+        "MSFT_sRGBFactors": false
+      }
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 6
+        },
+        "metallicRoughnessTexture": {
+          "index": 7
+        }
+      },
+      "name": "84",
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseTexture": {
+            "index": 4
+          },
+          "specularGlossinessTexture": {
+            "index": 5
+          }
+        }
+      },
+      "extras": {
+        "MSFT_sRGBFactors": false
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "mesh_id30",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 2,
+            "NORMAL": 4,
+            "TEXCOORD_0": 6,
+            "COLOR_0": 8
+          },
+          "indices": 0,
+          "material": 0
+        }
+      ]
+    },
+    {
+      "name": "mesh_id28",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 3,
+            "NORMAL": 5,
+            "TEXCOORD_0": 7,
+            "COLOR_0": 9
+          },
+          "indices": 1,
+          "material": 1
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "translation": [
+        0.0038448870182037354,
+        0.0342765636742115,
+        0.0
+      ],
+      "scale": [
+        0.11723770201206207,
+        0.10063673555850983,
+        0.058618851006031036
+      ],
+      "mesh": 0
+    },
+    {
+      "translation": [
+        0.00335137196816504,
+        -0.00025471605476923287,
+        0.0
+      ],
+      "scale": [
+        0.193765327334404,
+        0.17031779885292053,
+        0.096882663667202
+      ],
+      "mesh": 1
+    },
+    {
+      "children": [
+        0,
+        1
+      ],
+      "name": "root"
+    }
+  ],
+  "samplers": [
+    {
+      "minFilter": 9985
+    }
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        2
+      ]
+    }
+  ],
+  "scene": 0,
+  "textures": [
+    {
+      "name": "texture304",
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "name": "texture308",
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "name": "82_bc",
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "name": "82_mr",
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "name": "texture314",
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "name": "texture317",
+      "sampler": 0,
+      "source": 5
+    },
+    {
+      "name": "84_bc",
+      "sampler": 0,
+      "source": 6
+    },
+    {
+      "name": "84_mr",
+      "sampler": 0,
+      "source": 7
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ]
+}

@@ -1,6 +1,6 @@
 <template>
-<div class="outterPage">
-  second
+<div class="relative w-full h-full">
+<First />
 </div>
 </template>
 

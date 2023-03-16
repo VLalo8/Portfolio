@@ -1,5 +1,6 @@
 <template>
 <div class="outterPage p-20">
+  <div>
     <ul class="h-40 writer-text">
       <div class="text-first">
         Hello,
@@ -12,10 +13,11 @@
       </div>
     </ul>
   </div>
+  
   <div class="absolute right-2 bottom-3">
     <img class="animate-bounce" src="/icons/DownArrow.svg" />
 </div>
-
+</div>
 </template>
 
 <script setup>

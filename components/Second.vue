@@ -1,6 +1,10 @@
 <template>
 <div class="outterPage">
   second
+  <CssLogo />
+  <HtmlLogo />
+  <VueLogo />
+  <ThreeLogo />
 </div>
 </template>
 

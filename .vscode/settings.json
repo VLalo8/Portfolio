@@ -11,7 +11,6 @@
     ".nuxt": true,
     "dist": true,
     ".output": true,
-    "public": true,
     "node_modules": true
   },
   "hide-files.files": [
@@ -20,7 +19,6 @@
     ".nuxt",
     "dist",
     ".output",
-    "public",
     "node_modules"
   ]
 }

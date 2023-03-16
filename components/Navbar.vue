@@ -4,16 +4,16 @@
     
   </a>
   <nav class="items-center flex flex-col border-t-zinc-800 border-t w-full">
-    <a href="#componentA">
+    <NuxtLink to="FirstPage">
       Home
-    </a>
-    <NuxtLink href="#componentB">
+    </NuxtLink>
+    <NuxtLink :to="{path: '/', hash: '#componentB'}">
       About
     </NuxtLink>
     <a href="#componentB">
       Skills
     </a>
-    <a href="#componentA">
+    <a href="/#componentA">
       Contact
     </a>
   </nav>
@@ -48,6 +48,7 @@
 </template>
 
 <script setup>
+
 
 </script>
 
