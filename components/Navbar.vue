@@ -4,18 +4,18 @@
     
   </a>
   <nav class="items-center flex flex-col border-t-zinc-800 border-t w-full">
-    <NuxtLink to="FirstPage">
+    <NuxtLink to="/">
       Home
     </NuxtLink>
-    <NuxtLink :to="{path: '/', hash: '#componentB'}">
+    <NuxtLink href="SecondPage">
       About
     </NuxtLink>
-    <a href="#componentB">
+    <NuxtLink href="/">
       Skills
-    </a>
-    <a href="/#componentA">
+    </NuxtLink>
+    <NuxtLink href="ThirdPage">
       Contact
-    </a>
+    </NuxtLink>
   </nav>
   <div class="flex justify-center mb-20">
     <div class="flex flex-col justify-center gap-6">

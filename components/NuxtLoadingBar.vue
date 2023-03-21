@@ -87,7 +87,7 @@ onBeforeUnmount(() => clear);
 
 <template>
   <div>
-  <div v-show="data.show" class="backdrop flex items-center justify-center">
+  <div v-show="data.show" class="backdrop flex items-center justify-center select-none">
     <div class="text-black loading rounded-md w-1/3 h-1/3 z-50">
       <div class="loading-first">
       <span style="color:#36c0c0">function</span>
@@ -169,19 +169,19 @@ onBeforeUnmount(() => clear);
 
 
 .loading-second {
-  animation: anim-second 5s steps(5,end) infinite;
+  animation: anim-second 1.5s steps(5,end) infinite;
   @apply overflow-hidden whitespace-nowrap;
 }
 .loading-third {
-  animation: anim-third 5s steps(5,end) infinite;
+  animation: anim-third 1.5s steps(5,end) infinite;
   @apply overflow-hidden whitespace-nowrap;
 }
 .loading-fourth {
-  animation: anim-fourth 5s steps(5,end) infinite;
+  animation: anim-fourth 1.5s steps(5,end) infinite;
   @apply overflow-hidden whitespace-nowrap;
 }
 .loading-fifth {
-  animation: anim-fifth 5s steps(5,end) infinite;
+  animation: anim-fifth 1.5s steps(5,end) infinite;
   @apply overflow-hidden whitespace-nowrap;
 }
 

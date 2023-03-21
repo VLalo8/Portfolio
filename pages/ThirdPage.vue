@@ -1,7 +1,11 @@
 <template>
-<div class="relative w-full h-full">
-<First />
+<div class="outterPage">
+  <ClientOnly>
+  <FollowMouse />
+</ClientOnly>
 </div>
+
+
 </template>
 
 <script setup>

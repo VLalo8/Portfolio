@@ -25,9 +25,7 @@
   
   const ambientLight = new AmbientLight(0xffffff, 1.5);
   scene.add(ambientLight);
-  
-  const defaultVector = new Vector3(0,0,0);
-  
+
   let gltf = new Object3D();
   
   
@@ -35,15 +33,12 @@
     scene.add(gltf.scene)
     console.log(gltf)
   })
-  
-  gltf.rotateOnAxis(defaultVector,0)
-  gltf.rotateY(1)
-  
+
   function setRenderer() {
     if(theCanvas.value) {
     renderer = new WebGLRenderer({ canvas: theCanvas.value, alpha: true })
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    renderer.setSize((100),(100))
+    renderer.setSize((200),(200))
     setControls()
 
     }

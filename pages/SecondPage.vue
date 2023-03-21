@@ -1,10 +1,12 @@
 <template>
 <div class="outterPage">
   second
-  <CssLogo />
-  <HtmlLogo />
-  <VueLogo />
-  <ThreeLogo />
+  <div class="grid grid-cols-2">
+    <CssLogo />
+    <HtmlLogo />
+    <VueLogo />
+    <ThreeLogo />
+  </div>
 </div>
 </template>
 

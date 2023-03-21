@@ -26,18 +26,10 @@
   const ambientLight = new AmbientLight(0xffffff, 1.5);
   scene.add(ambientLight);
   
-  const defaultVector = new Vector3(0,0,0);
-  
-  let gltf = new Object3D();
-  
-  
   gltfLoader.load('/vue-logo/vue.gltf', gltf => {
     scene.add(gltf.scene)
     console.log(gltf)
   })
-  
-  gltf.rotateOnAxis(defaultVector,0)
-  gltf.rotateY(1)
 
   function setRenderer() {
     if(theCanvas.value) {

@@ -36,9 +36,6 @@
     console.log(gltf)
   })
   
-  gltf.rotateOnAxis(defaultVector,0)
-  gltf.rotateY(1)
-  
   function setRenderer() {
     if(theCanvas.value) {
     renderer = new WebGLRenderer({ canvas: theCanvas.value, alpha: true })
