@@ -35,11 +35,15 @@ loader.load( 'DamagedHelmet.gltf', function ( gltf ) {
   base.add( gltf.scene );
 } );
 
+  function updateRenderer() {
+    renderer.setPixelRatio(aspectRatio.value)
+    renderer.setSize(winWidth.value, winHeight.value)
+  }
+
   function setRenderer() {
     if(theCanvas.value) {
     renderer = new WebGLRenderer({ canvas: theCanvas.value, alpha: true })
-    renderer.setPixelRatio(Math.min(aspectRatio.value, 2))
-    renderer.setSize(winWidth.value, winHeight.value)
+    updateRenderer()
     }
   }
 
@@ -58,14 +62,19 @@ function onMouseMove(event){
   base.lookAt(pointOfIntersection);
 }
 
+watch(aspectRatio, ()=> {
+  updateRenderer()
+})
+
+window.addEventListener("mousemove", onMouseMove, false)
+
 onMounted(()=>{
-    
     setRenderer()
     loop()
   })
   
   const loop = () => {
-    window.addEventListener("mousemove", onMouseMove, false)
+    
     renderer.render(scene, camera)
     requestAnimationFrame(loop)
   }

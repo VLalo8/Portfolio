@@ -1,9 +1,17 @@
 <template>
   <div class="fixed h-full w-full overflow-x-hidden">
-    <Navbar />
+    <Navbar v-if="screenSize == 'big'" />
+    <div
+     :class="showNav ? 'block' : 'hidden'">
+      <SmallNavbar />
+    </div>
+    <button class="fixed mt-2 ml-2" v-if="screenSize=='small'" @click="isOpen = !isOpen">
+      <img src="/icons/bar.svg" />
+    </button>
     
-    <NuxtLoadingBar :height="4"/>
-      <div class="pl-32 h-screen">
+
+    <NuxtLoadingBar />
+      <div class="pl-0 md:pl-32 h-screen">
         <slot />
     </div>
 </div>
@@ -11,9 +19,29 @@
 </template>
 
 <script setup>
+import { useWindowSize } from '@vueuse/core';
+
+const { width } = useWindowSize();
+
+const screenSize =  computed(()=> {
+  return width.value > 767 ? 'big' : 'small'
+})
+
+const isOpen = ref(false);
+
+const showNav = computed(()=> {
+  if (isOpen.value == true && screenSize.value == 'small') {
+    return true
+  }
+  else {
+    return false
+  }
+})
 
 </script>
 
 <style scoped>
-
+.isHidden {
+  display: none;
+}
 </style>
