@@ -1,16 +1,16 @@
 <template>
 <div class="slide-in-left flex justify-center left-0 h-full w-full fixed bg-zinc-900 flex-col">
   <nav class="items-center flex flex-col border-t-zinc-800 border-t w-full">
-    <NuxtLink to="/">
+    <NuxtLink to="/" @click="store.closeNav">
       Home
     </NuxtLink>
-    <NuxtLink href="SecondPage">
+    <NuxtLink to="SecondPage" @click="store.closeNav">
       About
     </NuxtLink>
-    <NuxtLink href="/">
+    <NuxtLink to="/" @click="store.closeNav">
       Skills
     </NuxtLink>
-    <NuxtLink href="ThirdPage">
+    <NuxtLink to="ThirdPage" @click="store.closeNav">
       Contact
     </NuxtLink>
   </nav>
@@ -43,7 +43,9 @@
 </template>
 
 <script setup>
+import { useNavState } from '../stores/NavState';
 
+const store = useNavState();
 </script>
 
 <style scoped>

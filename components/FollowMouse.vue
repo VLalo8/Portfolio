@@ -52,13 +52,15 @@ var raycaster = new Raycaster();
 var mouse = new Vector2();
 var pointOfIntersection = new Vector3();
 
-
-function onMouseMove(event){
-  mouse.x = ( event.clientX / winWidth.value ) * 2 - 1;
-  mouse.y = - ( event.clientY / winHeight.value ) * 2 + 1;
+function onMouseMove(event) {
+  const canvas = theCanvas.value;
+  const rect = canvas.getBoundingClientRect();
+  const mouseX = event.clientX - rect.left;
+  const mouseY = event.clientY - rect.top;
+  mouse.x = (mouseX / canvas.clientWidth) * 2 - 1;
+  mouse.y = -(mouseY / canvas.clientHeight) * 2 + 1;
   raycaster.setFromCamera(mouse, camera);
   raycaster.ray.intersectPlane(plane, pointOfIntersection);
-  pointOfIntersection.setX(pointOfIntersection.x-0.8);
   base.lookAt(pointOfIntersection);
 }
 
