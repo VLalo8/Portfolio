@@ -9,9 +9,11 @@
   import {Scene, PerspectiveCamera, Raycaster, WebGLRenderer, AmbientLight, Object3D, Vector3, DirectionalLight, Plane, Vector2, PlaneHelper} from 'three';
   import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
   import { useWindowSize } from '@vueuse/core';
+  import { useDevicePixelRatio } from '@vueuse/core';
 
   const { width: winWidth, height: winHeight } = useWindowSize();
   const aspectRatio = computed(()=> winWidth.value / winHeight.value);
+  const { pixelRatio } = useDevicePixelRatio();
 
   let renderer: WebGLRenderer;
   
@@ -36,7 +38,7 @@ loader.load( 'DamagedHelmet.gltf', function ( gltf ) {
 } );
 
   function updateRenderer() {
-    renderer.setPixelRatio(aspectRatio.value)
+    renderer.setPixelRatio(pixelRatio.value)
     renderer.setSize(winWidth.value, winHeight.value)
   }
 
@@ -68,12 +70,15 @@ watch(aspectRatio, ()=> {
   updateRenderer()
 })
 
-window.addEventListener("mousemove", onMouseMove, false)
+onMounted(() => {
+  window.addEventListener("mousemove", onMouseMove, false)
+  setRenderer()
+  loop()
+});
 
-onMounted(()=>{
-    setRenderer()
-    loop()
-  })
+onUnmounted(() => {
+  window.removeEventListener("mousemove", onMouseMove, false)
+});
   
   const loop = () => {
     

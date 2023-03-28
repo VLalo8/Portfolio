@@ -4,16 +4,16 @@
     
   </NuxtLink>
   <nav class="items-center flex flex-col border-t-zinc-800 border-t w-full">
-    <NuxtLink to="/">
+    <NuxtLink to="/" activeClass="active">
       Home
     </NuxtLink>
-    <NuxtLink href="SecondPage">
-      About
-    </NuxtLink>
-    <NuxtLink href="/">
+    <NuxtLink to="Skills" activeClass="active">
       Skills
     </NuxtLink>
-    <NuxtLink href="ThirdPage">
+    <NuxtLink to="/" activeClass="active">
+      Skills
+    </NuxtLink>
+    <NuxtLink to="ThirdPage" activeClass="active">
       Contact
     </NuxtLink>
   </nav>
@@ -59,5 +59,9 @@ nav > a {
 
 nav > a {
   @apply hover:text-emerald-400
+}
+
+.active {
+  @apply text-emerald-400
 }
 </style>

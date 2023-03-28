@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed h-full w-full overflow-x-hidden">
+  <div class="fixed h-full w-full overflow-x-hidden bg-zinc-800">
     <Navbar v-if="screenSize == 'big'" />
     <div
      :class="showNav ? 'block' : 'hidden'">
