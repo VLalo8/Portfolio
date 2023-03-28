@@ -1,11 +1,11 @@
 <template>
-  <div class="fixed h-full w-full overflow-x-hidden">
+  <div class="fixed h-full w-full overflow-x-hidden bg-zinc-800">
     <Navbar v-if="screenSize == 'big'" />
     <div
      :class="showNav ? 'block' : 'hidden'">
       <SmallNavbar />
     </div>
-    <button class="fixed mt-2 ml-2" v-if="screenSize=='small'" @click="isOpen = !isOpen">
+    <button class="fixed mt-2 ml-2" v-if="screenSize=='small'" @click="store.navToggle">
       <img src="/icons/bar.svg" />
     </button>
     
@@ -20,6 +20,9 @@
 
 <script setup>
 import { useWindowSize } from '@vueuse/core';
+import { useNavState } from '../stores/NavState';
+
+const store = useNavState();
 
 const { width } = useWindowSize();
 
@@ -27,10 +30,8 @@ const screenSize =  computed(()=> {
   return width.value > 767 ? 'big' : 'small'
 })
 
-const isOpen = ref(false);
-
 const showNav = computed(()=> {
-  if (isOpen.value == true && screenSize.value == 'small') {
+  if (store.navActive == true && screenSize.value == 'small') {
     return true
   }
   else {

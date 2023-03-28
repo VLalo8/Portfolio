@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+html {
+  @apply selection:bg-[#121212]
+}
+
   .outterPage {
-    @apply w-full h-full bg-zinc-800 text-white text-3xl
+    @apply w-full h-full text-white text-3xl
   }
 
 

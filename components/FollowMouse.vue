@@ -9,9 +9,11 @@
   import {Scene, PerspectiveCamera, Raycaster, WebGLRenderer, AmbientLight, Object3D, Vector3, DirectionalLight, Plane, Vector2, PlaneHelper} from 'three';
   import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
   import { useWindowSize } from '@vueuse/core';
+  import { useDevicePixelRatio } from '@vueuse/core';
 
   const { width: winWidth, height: winHeight } = useWindowSize();
   const aspectRatio = computed(()=> winWidth.value / winHeight.value);
+  const { pixelRatio } = useDevicePixelRatio();
 
   let renderer: WebGLRenderer;
   
@@ -36,7 +38,7 @@ loader.load( 'DamagedHelmet.gltf', function ( gltf ) {
 } );
 
   function updateRenderer() {
-    renderer.setPixelRatio(aspectRatio.value)
+    renderer.setPixelRatio(pixelRatio.value)
     renderer.setSize(winWidth.value, winHeight.value)
   }
 
@@ -52,13 +54,15 @@ var raycaster = new Raycaster();
 var mouse = new Vector2();
 var pointOfIntersection = new Vector3();
 
-
-function onMouseMove(event){
-  mouse.x = ( event.clientX / winWidth.value ) * 2 - 1;
-  mouse.y = - ( event.clientY / winHeight.value ) * 2 + 1;
+function onMouseMove(event) {
+  const canvas = theCanvas.value;
+  const rect = canvas.getBoundingClientRect();
+  const mouseX = event.clientX - rect.left;
+  const mouseY = event.clientY - rect.top;
+  mouse.x = (mouseX / canvas.clientWidth) * 2 - 1;
+  mouse.y = -(mouseY / canvas.clientHeight) * 2 + 1;
   raycaster.setFromCamera(mouse, camera);
   raycaster.ray.intersectPlane(plane, pointOfIntersection);
-  pointOfIntersection.setX(pointOfIntersection.x-0.8);
   base.lookAt(pointOfIntersection);
 }
 
@@ -66,12 +70,15 @@ watch(aspectRatio, ()=> {
   updateRenderer()
 })
 
-window.addEventListener("mousemove", onMouseMove, false)
+onMounted(() => {
+  window.addEventListener("mousemove", onMouseMove, false)
+  setRenderer()
+  loop()
+});
 
-onMounted(()=>{
-    setRenderer()
-    loop()
-  })
+onUnmounted(() => {
+  window.removeEventListener("mousemove", onMouseMove, false)
+});
   
   const loop = () => {
     
