@@ -10,7 +10,7 @@
     <NuxtLink to="/" @click="store.closeNav">
       Skills
     </NuxtLink>
-    <NuxtLink to="ThirdPage" @click="store.closeNav">
+    <NuxtLink to="Contact" @click="store.closeNav">
       Contact
     </NuxtLink>
   </nav>

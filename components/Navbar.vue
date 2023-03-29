@@ -13,7 +13,7 @@
     <NuxtLink to="/" activeClass="active">
       Skills
     </NuxtLink>
-    <NuxtLink to="ThirdPage" activeClass="active">
+    <NuxtLink to="Contact" activeClass="active">
       Contact
     </NuxtLink>
   </nav>

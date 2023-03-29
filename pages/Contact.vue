@@ -1,7 +1,11 @@
 <template>
-<div class="outterPage p-10 md:p-20">
-Contact
+<div class="outterPage">
+  <ClientOnly>
+  <FollowMouse />
+</ClientOnly>
 </div>
+
+
 </template>
 
 <script setup>

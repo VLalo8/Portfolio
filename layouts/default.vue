@@ -8,8 +8,6 @@
     <button class="fixed mt-2 ml-2" v-if="screenSize=='small'" @click="store.navToggle">
       <img src="/icons/bar.svg" />
     </button>
-    
-
     <NuxtLoadingBar />
       <div class="pl-0 md:pl-32 h-screen">
         <slot />

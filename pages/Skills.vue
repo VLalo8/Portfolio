@@ -1,6 +1,6 @@
 <template>
 <div class="outterPage p-10 md:p-20 pt-40">
-  <div class="flex flex-row flex-wrap justify-between gap-12">
+  <div class="flex flex-row flex-wrap gap-2 md:gap-20">
     <div class="flex flex-col">
         <div class="flex flex-col gap-12">
           <div class="text-4xl md:text-6xl flex-wrap font-semibold hover:text-emerald-400">
@@ -13,7 +13,7 @@
           </div>
         </div>
       </div>
-    <div class="flex flex-col pr-30 md:pr-0 text-xl md:text-3xl font-semibold">
+    <div class="flex flex-col text-xl md:text-3xl font-semibold">
       <div class="hover:text-emerald-400">
         Stack used for this Portfolio:
       </div>
