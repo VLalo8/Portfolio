@@ -1,5 +1,5 @@
 <template>
-<div class="outterPage p-10 md:p-20 flex flex-col justify-between">
+<div class="outterPage p-1 pt-10 sm:pt-10 sm:p-10 md:p-20 flex flex-col justify-between">
   <div>
     <ul class="h-48 writer-text">
       <div class="text-first">
@@ -28,7 +28,7 @@
 <style scoped>
 .writer-text {
   letter-spacing: 2px;
-  @apply text-white text-4xl md:text-6xl font-mono overflow-hidden font-bold select-none;
+  @apply text-white text-5xl sm:text-6xl font-mono overflow-hidden font-bold;
 }
 
 .text-first {

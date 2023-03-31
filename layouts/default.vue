@@ -11,9 +11,13 @@
     <NuxtLoadingBar />
       <div class="pl-0 md:pl-32 h-screen">
         <slot />
-    </div>
+      </div>
+  <div class="fixed bottom-0 right-0 w-1/4 h-1/4">
+    <ClientOnly>
+      <CoffeeCup />
+    </ClientOnly>   
+  </div>
 </div>
-
 </template>
 
 <script setup>

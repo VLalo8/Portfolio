@@ -81,7 +81,6 @@ onUnmounted(() => {
 });
   
   const loop = () => {
-    
     renderer.render(scene, camera)
     requestAnimationFrame(loop)
   }

@@ -2,10 +2,8 @@
 <div class="outterPage">
   <ClientOnly>
   <FollowMouse />
-</ClientOnly>
+  </ClientOnly>
 </div>
-
-
 </template>
 
 <script setup>

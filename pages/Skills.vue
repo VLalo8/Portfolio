@@ -1,19 +1,20 @@
 <template>
-<div class="outterPage p-10 md:p-20 pt-40">
-  <div class="flex flex-row flex-wrap gap-2 md:gap-20">
-    <div class="flex flex-col">
-        <div class="flex flex-col gap-12">
-          <div class="text-4xl md:text-6xl flex-wrap font-semibold hover:text-emerald-400">
+<div class="outterPage p-10 md:p-20 md:py-40 flex flex-row justify-start md:justify-around flex-wrap lg:flex-nowrap items-center">
+        <div class="flex flex-col gap-12 sm:pb-8 md:pb-16 min-w-[370px]">
+          <div class="text-4xl md:text-6xl font-semibold">
+            <span class="hover:text-emerald-400">
             Skills & Technologies
+            </span>
           </div>
-          <div class="text-lg md:text-xl sm:pb-8 md:pb-16 min-w-[400px]">
+          <div class="text-lg md:text-xl">
             My main area of 
-            expertise is front-end, <br> building websites using
-            HTML, CSS, JS as basis,<br> using modern frameworks like Vue and tailwind.
-          </div>
-        </div>
+            expertise is front-end, <br> building responsive
+            and reactive websites <br> using 
+            HTML, CSS, JS and modern frameworks <br>
+            like Vue and tailwind.
       </div>
-    <div class="flex flex-col text-xl md:text-3xl font-semibold">
+      </div>
+    <div class="flex flex-col text-xl md:text-3xl font-semibold min-w-[270px]">
       <div class="hover:text-emerald-400">
         Stack used for this Portfolio:
       </div>
@@ -29,7 +30,6 @@
         <img src="/icons/vscode.svg" />
       </div>
     </div>
-  </div>
 </div>
 </template>
 

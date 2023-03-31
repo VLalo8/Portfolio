@@ -4,10 +4,10 @@
     <NuxtLink to="/" @click="store.closeNav">
       Home
     </NuxtLink>
-    <NuxtLink to="Skills" @click="store.closeNav">
-      Skills
+    <NuxtLink to="About" @click="store.closeNav">
+      About
     </NuxtLink>
-    <NuxtLink to="/" @click="store.closeNav">
+    <NuxtLink to="Skills" @click="store.closeNav">
       Skills
     </NuxtLink>
     <NuxtLink to="Contact" @click="store.closeNav">
