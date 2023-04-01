@@ -6,8 +6,8 @@
       About Me
       </span>
     </div>
-    <div class="text-lg md:text-xl min-w-[370px]">
-      Software Developer based in Greece.
+    <div class="text-lg md:text-xl md:min-w-[370px]">
+      Software Developer based in Athens Greece.
       Mainly Focused on building Front-end apps, <br>
       passionate about programming and
       extremely eager to learn new technologies.<br><br>

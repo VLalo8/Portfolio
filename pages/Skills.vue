@@ -1,6 +1,6 @@
 <template>
-<div class="outterPage p-10 md:p-20 md:py-40 flex flex-row justify-start md:justify-around flex-wrap lg:flex-nowrap items-center">
-        <div class="flex flex-col gap-12 sm:pb-8 md:pb-16 min-w-[370px]">
+<div class="outterPage p-10 md:p-20 md:py-40 flex flex-row md:gap-8 justify-start flex-wrap lg:flex-nowrap">
+        <div class="flex flex-col gap-12 sm:pb-8 md:pb-16 md:min-w-[370px]">
           <div class="text-4xl md:text-6xl font-semibold">
             <span class="hover:text-emerald-400">
             Skills & Technologies

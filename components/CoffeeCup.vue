@@ -1,6 +1,6 @@
 <template>
   <div>
-  <canvas class="w-full h-full" ref="theCanvas" />
+  <canvas class="w-full h-full relative z-0" ref="theCanvas" />
   </div>
 </template>
 
@@ -14,7 +14,7 @@
   const theCanvas: Ref<HTMLCanvasElement | null> = ref(null);
   const { width: winWidth, height: winHeight } = useWindowSize();
 
-  const aspectRatio = computed(()=> winWidth.value / winHeight.value);
+  const aspectRatio = computed(()=> (winWidth.value / winHeight.value));
   const { pixelRatio } = useDevicePixelRatio();
 
   let renderer: WebGLRenderer;
@@ -22,8 +22,8 @@
   
   const scene = new Scene();
 
-  const camera = new PerspectiveCamera(75, aspectRatio.value, 0.1, 1000);
-  camera.position.set(0, 0, 0.23);
+  const camera = new PerspectiveCamera(62, aspectRatio.value, 0.1, 1000);
+  camera.position.set(0, 0, 0.2);
   scene.add(camera);
   
   const ambientLight = new AmbientLight(0xffffff, 1.5);
@@ -50,6 +50,7 @@
     controls.maxPolarAngle = 0.95;
     controls.minPolarAngle = 0.95;
     controls.enableZoom = false;
+    controls.enablePan = false;
     }
   }
 
