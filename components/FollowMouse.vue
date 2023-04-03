@@ -22,7 +22,7 @@
   const scene = new Scene();
   
   const camera = new PerspectiveCamera(60, aspectRatio.value, 1, 1000);
-  camera.position.set(0, 0, 7);
+  camera.position.set(0, -0.25, 4.8);
   scene.add(camera);
   
   const ambientLight = new AmbientLight(0xffffff, 1.5);
@@ -39,7 +39,7 @@ loader.load( 'DamagedHelmet.gltf', function ( gltf ) {
 
   function updateRenderer() {
     renderer.setPixelRatio(pixelRatio.value)
-    renderer.setSize(winWidth.value, winHeight.value)
+    renderer.setSize((winWidth.value)*(2/3), (winHeight.value)*(2/3))
   }
 
   function setRenderer() {
@@ -81,7 +81,6 @@ onUnmounted(() => {
 });
   
   const loop = () => {
-    
     renderer.render(scene, camera)
     requestAnimationFrame(loop)
   }

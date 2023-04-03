@@ -4,7 +4,7 @@
 
 @layer base {
 html {
-  @apply selection:bg-[#121212]
+  @apply selection:bg-[#121212] z-10
 }
 
   .outterPage {

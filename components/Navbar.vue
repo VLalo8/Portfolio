@@ -1,19 +1,19 @@
 <template>
 <div class="flex justify-between left-0 h-full w-32 fixed bg-zinc-900 flex-col">
-  <NuxtLink to="/" class="self-start bg-black w-full h-40">
-    
+  <NuxtLink to="/" class="self-start bg-zinc-700 w-full h-40">
+    <img src="/icons/NotebookAnimation.svg" class="w-32 h-36" />
   </NuxtLink>
   <nav class="items-center flex flex-col border-t-zinc-800 border-t w-full">
     <NuxtLink to="/" activeClass="active">
       Home
     </NuxtLink>
+    <NuxtLink to="About" activeClass="active">
+      About
+    </NuxtLink>
     <NuxtLink to="Skills" activeClass="active">
       Skills
     </NuxtLink>
-    <NuxtLink to="/" activeClass="active">
-      Skills
-    </NuxtLink>
-    <NuxtLink to="ThirdPage" activeClass="active">
+    <NuxtLink to="Contact" activeClass="active">
       Contact
     </NuxtLink>
   </nav>
