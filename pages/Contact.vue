@@ -3,20 +3,35 @@
   <ClientOnly class="w-2/3 h-2/3">
   <FollowMouse />
   </ClientOnly>
-  <div class="self-start pl-36">
-    <form class="flex flex-col gap-5 w-96" accept-charset="UTF-8" action="https://www.formbackend.com/f/37be8c47c3637d22" method="POST">
-      <div class=" w-96 grid grid-cols-2 gap-2">
+  <div class="self-start pl-12">
+    <div class="flex flex-col md:flex-row gap-6">
+      <div class="flex flex-col gap-12">
+    <div class="text-4xl md:text-6xl font-semibold">
+      <span class="hover:text-emerald-400">
+      Contact Me
+      </span>
+    </div>
+    <div class="text-lg md:text-xl md:min-w-[370px]">
+      Interested to hear about new opportunities,<br>
+      Don't hesitate to message be about new ideas,<br>
+      offers or projects!
+    </div>
+  </div>
+    <form class="flex flex-col gap-3 w-80" action="https://formsubmit.co/vlalogiannis@gmail.com" method="post">
+      <div class="flex flex-row gap-2">
         <input type="text" id="name" name="name" placeholder="Name" required>
         <input type="email" id="email" name="email" placeholder="Email" required>
       </div>
-      <div class=" w-96">
-        <input class="w-96" type="text" id="subject" name="subject" placeholder="Subject">
-      </div>
-      <div class="h-20 w-96">
-        <textarea class="h-20 w-96 bg-zinc-700 text-lg md:text-xl" type="text" id="message" name="message" placeholder="Message" />
-      </div>
-  <button type="submit">Submit</button>
-</form> 
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="http://localhost:3000/Contact">
+      <textarea placeholder="Your Message" name="message" rows="4" required />
+        <button type="submit" class="relative z-10 block w-40 h-10 md:w-52 md:h-14 px-6 py-3 text-center text-lg md:text-2xl font-semibold text-white rounded-lg group">
+    <span class="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-emerald-400 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0"></span>
+    <span class="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-emerald-700 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen"></span>
+    <span class="relative">Contact me!</span>
+        </button>
+    </form>
+    </div>
   </div>
 </div>
 </template>
@@ -27,10 +42,10 @@
 
 <style scoped>
 input {
-  @apply bg-zinc-700 text-lg md:text-xl pl-3 p-2 rounded-md focus:outline-none focus:ring-zinc-900 focus:ring-2 valid:border-green-500 invalid:border-red-500 required:border-red-500
+  @apply bg-zinc-700 w-full text-lg md:text-xl pl-3 p-2 rounded-md focus:outline-none focus:ring-zinc-900 focus:ring-2 valid:border-green-500 invalid:border-red-500 required:border-red-500
 }
 textarea {
    resize: horizontal;
-   @apply min-w-full max-w-xl relative z-10 rounded-md focus:outline-none focus:ring-zinc-900 focus:ring-2
+   @apply bg-zinc-700 text-lg md:text-xl pl-3 p-2 min-w-full max-w-xl relative z-10 rounded-md focus:outline-none focus:ring-zinc-900 focus:ring-2
 }
 </style>
