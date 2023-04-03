@@ -1,10 +1,7 @@
 <template>
-<div class="outterPage flex flex-col items-center">
-  <ClientOnly class="w-2/3 h-2/3">
-  <FollowMouse />
-  </ClientOnly>
-  <div class="self-start pl-12">
-    <div class="flex flex-col md:flex-row gap-6">
+<div class="outterPage flex flex-col md:flex-row items-center">
+  <div class="md:pl-20 pt-10 ">
+    <div class="flex flex-col gap-6">
       <div class="flex flex-col gap-12">
     <div class="text-4xl md:text-6xl font-semibold">
       <span class="hover:text-emerald-400">
@@ -33,6 +30,9 @@
     </form>
     </div>
   </div>
+    <ClientOnly class="w-2/3 h-2/3">
+  <FollowMouse />
+  </ClientOnly>
 </div>
 </template>
 

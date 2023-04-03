@@ -1,5 +1,5 @@
 <template>
-<div class="outterPage p-1 pt-10 sm:pt-10 sm:p-10 md:p-20 flex flex-col justify-between">
+<div class="outterPage p-2 pt-10 md:p-20 flex flex-col justify-between">
   <div>
     <ul class="h-48 writer-text">
       <div class="text-first">

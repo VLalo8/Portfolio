@@ -1,5 +1,5 @@
 <template>
-<div class="slide-in-left flex justify-center left-0 h-full w-full fixed bg-zinc-900 flex-col">
+<div class="z-20 slide-in-left flex justify-center left-0 h-full w-full fixed bg-zinc-900 flex-col">
   <nav class="items-center flex flex-col border-t-zinc-800 border-t w-full">
     <NuxtLink to="/" @click="store.closeNav">
       Home
