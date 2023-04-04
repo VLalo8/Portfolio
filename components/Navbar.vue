@@ -1,5 +1,5 @@
 <template>
-<div class="flex justify-between left-0 h-full w-32 fixed bg-zinc-900 flex-col">
+<div class="flex justify-between left-0 h-full w-36 fixed bg-zinc-900 flex-col">
   <NuxtLink to="/" class="self-start bg-zinc-700 w-full h-40">
     <img src="/icons/NotebookAnimation.svg" class="w-32 h-36" />
   </NuxtLink>
@@ -54,11 +54,7 @@
 
 <style scoped>
 nav > a {
-  @apply border-b-zinc-800 border-b w-full text-center leading-13 text-zinc-400
-}
-
-nav > a {
-  @apply hover:text-emerald-400
+  @apply border-b-zinc-800 border-b w-full text-center text-xl leading-13 text-zinc-400 hover:text-emerald-400
 }
 
 .active {

@@ -1,6 +1,6 @@
 <template>
-<div class="outterPage flex flex-col md:flex-row items-center">
-  <div class="md:pl-20 pt-10 ">
+<div class="outterPage flex flex-row items-start gap-10 p-2 pt-10 md:p-8 md:pt-40">
+  <div class="flex flex-col items-center gap-10 md:min-w-[600px]">
     <div class="flex flex-col gap-6">
       <div class="flex flex-col gap-12">
     <div class="text-4xl md:text-6xl font-semibold">
@@ -29,15 +29,25 @@
         </button>
     </form>
     </div>
+  <div v-if="screenSize == 'big'" class="flex flex-col pr-20">
+    <span class="hover:text-emerald-400 text-4xl">More info about me!</span>
+    <img src="/icons/arrowLeft.svg" class="w-28 h-2w-28" />
   </div>
-    <ClientOnly class="w-2/3 h-2/3">
+</div>
+<ClientOnly v-if="screenSize == 'big'" class="self-center justify-self-center">
   <FollowMouse />
   </ClientOnly>
 </div>
 </template>
 
 <script setup>
+import { useWindowSize } from '@vueuse/core';
 
+const { width } = useWindowSize();
+
+const screenSize =  computed(()=> {
+  return width.value > 767 ? 'big' : 'small'
+})
 </script>
 
 <style scoped>
