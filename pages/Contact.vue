@@ -1,6 +1,6 @@
 <template>
-<div class="outterPage flex flex-row items-start gap-10 p-2 pt-10 md:p-8 md:pt-40">
-  <div class="flex flex-col items-center gap-10 md:min-w-[600px]">
+<div class="outterPage flex flex-row items-center gap-0 2xl:gap-10 p-2 pt-10 md:p-8">
+  <div class="flex flex-col h-auto md:h-full items-center justify-center gap-10 md:min-w-[600px]">
     <div class="flex flex-col gap-6">
       <div class="flex flex-col gap-12">
     <div class="text-4xl md:text-6xl font-semibold">
@@ -20,21 +20,21 @@
         <input type="email" id="email" name="email" placeholder="Email" required>
       </div>
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="http://localhost:3000/Contact">
+      <input type="hidden" name="_next" value="https://v-lalo.netlify.app/Contact">
       <textarea placeholder="Your Message" name="message" rows="4" required />
         <button type="submit" class="relative z-10 block w-40 h-10 md:w-52 md:h-14 px-6 py-3 text-center text-lg md:text-2xl font-semibold text-white rounded-lg group">
     <span class="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-emerald-400 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0"></span>
     <span class="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-emerald-700 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen"></span>
-    <span class="relative">Contact me!</span>
+    <span class="relative">Message me!</span>
         </button>
     </form>
     </div>
-  <div v-if="screenSize == 'big'" class="flex flex-col pr-20">
+  <div v-if="bigWidth && bigHeight" class="flex flex-col pr-20">
     <span class="hover:text-emerald-400 text-4xl">More info about me!</span>
     <img src="/icons/arrowLeft.svg" class="w-28 h-2w-28" />
   </div>
 </div>
-<ClientOnly v-if="screenSize == 'big'" class="self-center justify-self-center">
+<ClientOnly v-if="bigWidth">
   <FollowMouse />
   </ClientOnly>
 </div>
@@ -43,11 +43,16 @@
 <script setup>
 import { useWindowSize } from '@vueuse/core';
 
-const { width } = useWindowSize();
+const { width, height } = useWindowSize();
 
-const screenSize =  computed(()=> {
-  return width.value > 767 ? 'big' : 'small'
+const bigWidth =  computed(()=> {
+  return width.value > 767 ? true : false
 })
+
+const bigHeight =  computed(()=> {
+  return height.value > 690 ? true : false
+})
+
 </script>
 
 <style scoped>
