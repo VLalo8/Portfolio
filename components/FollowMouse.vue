@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="flex items-center">
   <canvas ref="theCanvas" />
   </div>
 </template>
 
 <script setup lang="ts">
   import {Ref} from 'vue';
-  import {Scene, PerspectiveCamera, Raycaster, WebGLRenderer, AmbientLight, Object3D, Vector3, DirectionalLight, Plane, Vector2, PlaneHelper} from 'three';
+  import {Scene, PerspectiveCamera, Raycaster, WebGLRenderer, AmbientLight, Object3D, Vector3, DirectionalLight, Plane, Vector2, PlaneHelper, CameraHelper, Camera} from 'three';
   import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
   import { useWindowSize } from '@vueuse/core';
   import { useDevicePixelRatio } from '@vueuse/core';
@@ -21,8 +21,11 @@
   
   const scene = new Scene();
   
-  const camera = new PerspectiveCamera(60, aspectRatio.value, 1, 1000);
-  camera.position.set(0, -0.25, 4.8);
+  const camera = new PerspectiveCamera(70, aspectRatio.value, 0.1, 2000);
+  //camera.position.set(0.9, -0.25, 4);
+  camera.position.set(0.1, -0.06, 300);
+  camera.zoom = 12;
+  camera.updateProjectionMatrix();
   scene.add(camera);
   
   const ambientLight = new AmbientLight(0xffffff, 1.5);
@@ -31,15 +34,21 @@
   let base = new Object3D();
   scene.add(base);
 
-const loader = new GLTFLoader().setPath( 'https://threejs.org/examples/models/gltf/DamagedHelmet/glTF/' );
+/*const loader = new GLTFLoader().setPath( 'https://threejs.org/examples/models/gltf/DamagedHelmet/glTF/' );
 loader.load( 'DamagedHelmet.gltf', function ( gltf ) {
   gltf.scene.scale.setScalar(2);
   base.add( gltf.scene );
-} );
+} );*/
+
+const gltfLoader = new GLTFLoader()
+
+gltfLoader.load('/stars/scene.gltf' ,(gltf) => {
+  base.add(gltf.scene)
+})
 
   function updateRenderer() {
     renderer.setPixelRatio(pixelRatio.value)
-    renderer.setSize((winWidth.value)*(2/3), (winHeight.value)*(2/3))
+    renderer.setSize((winWidth.value)*(1.8/3), (winHeight.value)*(2/3))
   }
 
   function setRenderer() {

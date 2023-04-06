@@ -9,7 +9,7 @@
       <img src="/icons/bar.svg" />
     </button>
     <NuxtLoadingBar />
-      <div class="pl-0 md:pl-32 h-screen">
+      <div class="pl-0 md:pl-36 h-screen">
         <slot />
       </div>
 </div>
