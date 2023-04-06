@@ -1,6 +1,6 @@
 <template>
 <div class="outterPage p-2 pt-10 md:p-20 flex flex-row">
-  <div class="flex flex-col justify-between">
+  <div class="flex flex-col justify-between min-w-[540px]">
     <div class="h-56 writer-text">
       <div class="text-first">
         Hello,
