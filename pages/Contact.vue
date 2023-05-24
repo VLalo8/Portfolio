@@ -1,5 +1,6 @@
+TODO:Compare with main, keep mobile flexibility from sub, but fix lg screen
 <template>
-<div class="outterPage flex flex-row items-center gap-0 2xl:gap-10 p-2 pt-10 md:p-8">
+<div class="outterPage flex flex-row items-center justify-center gap-0 2xl:gap-10 p-2 pt-10 md:p-8">
   <div class="flex flex-col h-auto md:h-full items-center justify-center gap-10 md:min-w-[600px]">
     <div class="flex flex-col gap-6">
       <div class="flex flex-col gap-12">
