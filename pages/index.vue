@@ -1,7 +1,7 @@
 <template>
 <div class="outterPage p-2 pt-10 md:p-20 flex flex-row">
   <div class="flex flex-col justify-between min-w-[540px]">
-    <div class="h-56 writer-text">
+    <div class="h-56 w-[1000px] writer-text">
       <div class="text-first">
         Hello,
       </div>
@@ -9,7 +9,7 @@
         I'm Vasilis,
       </div>
       <div class="text-third">
-        Web Developer
+        Software Developer
       </div>
     </div>
   <NuxtLink to="/Contact" class="relative block mb-52 w-40 h-10 md:w-52 md:h-14 px-6 py-3 text-center text-lg md:text-2xl font-semibold text-white rounded-lg group">
@@ -49,7 +49,7 @@ const screenSize =  computed(()=> {
   @apply overflow-hidden whitespace-nowrap hover:text-emerald-400
 }
 .text-third {
-  animation: typing-third 5s steps(13,end) infinite;
+  animation: typing-third 5s steps(18,end) infinite;
   @apply overflow-hidden whitespace-nowrap hover:text-emerald-400
 }
 
@@ -101,10 +101,10 @@ const screenSize =  computed(()=> {
     width: 0%
   }
   60% {
-    width: 540px
+    width: 748px
   }
   70% {
-    width:540px
+    width:748px
   }
   80% {
     width:0%
